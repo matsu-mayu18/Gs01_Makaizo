@@ -1,0 +1,122 @@
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+/*どの部分のcssに対して
+  命令をしているのかコメントを
+  記載しよう！
+  ---------------------*/
+
+/*Title
+  ---------------------*/
+.title-beta {
+  width: 100%;
+  height: 200px;
+  background-color: chartreuse;
+  background-size: cover;
+  color: #696969;
+
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.title-beta_text h1 {
+  font-size: 36px;
+  background-color: rgba(255, 255, 255, 0.5); /* 背景色を半透明の白に設定 */
+}
+
+.title-beta_text p {
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.5); /* 背景色を半透明の白に設定 */
+}
+
+/*Navi
+  ---------------------*/
+.nav-beta {
+  margin-bottom: 50px;
+}
+.button-beta {
+  width: 20%;
+  margin: 0 10px;
+  background-color: #8fbc8f; /* ボタンの背景色 */
+  color: #fff; /* ボタンのテキスト色 */
+  padding: 15px 5.5%; /* ボタンのパディング */
+  border: none; /* ボタンの枠線をなくす */
+  border-radius: 5px; /* ボタンの角丸を設定 */
+  cursor: pointer; /* マウスカーソルをポインターに変更 */
+  font-size: 24px; /* ボタンのテキストのフォントサイズ */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-beta_beta:hover {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* ボタンを押すとへこむ効果の影を追加 */
+  background: url(../img/title_cover.jpg);
+  color: #fff; /* hover時のテキスト色 */
+  background-color: #0056b3; /* hover時の背景色 */
+}
+
+.button-beta:active {
+  transform: scale(0.9); /* ボタンをクリックしたときに縮小する効果を追加 */
+}
+
+.nav-beta_list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Live stream */
+.livestream-beta {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+/* Livestream left */
+.livestream-beta_left {
+  width: 40%;
+  height: 425px;
+  background-color: rgb(143, 188, 143, 0.4);
+  border: 1px dotted #8fbc8f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.livestream-beta_left_title {
+  text-align: left;
+  color: #8fbc8f;
+}
+
+.livestream-beta_left_results {
+  width: 80%;
+  height: 60%;
+  background-color: rgb(255, 255, 255, 0.4);
+}
+
+.livestream-beta_results_list p {
+  font-size: 15px;
+}
+
+.result-beta {
+  display: flex;
+}
+
+.result-beta_title {
+  width: 50%;
+}
+.result-beta_data {
+  width: 50%;
+}
+
+/* Livestream right */
+.livestream-beta_right_video {
+  width: 60%;
+  height: 425px;
+}
+.livestream-beta_right_video video {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Makaizo</title>
+
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="canonical" href="#" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/sanitize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style-beta.css" />
+    <!-- あらかじめcssを読み込んでいるので設定しなくてOK-->
+  </head>
+
+  <body>
+    <!-- ここから記述しよう -->
+    <div class="header">
+      <div class="header_logo">
+        <a href="./index.html">
+          <img src="./img/logo.png" alt="" />
+        </a>
+      </div>
+      <div class="header_menu">
+        <button type="button" class="zdo_drawer_button">
+          <span class="zdo_drawer_bar zdo_drawer_bar1"></span>
+          <span class="zdo_drawer_bar zdo_drawer_bar2"></span>
+          <span class="zdo_drawer_bar zdo_drawer_bar3"></span>
+          <span class="zdo_drawer_menu_text zdo_drawer_text">MENU</span>
+          <span class="zdo_drawer_close zdo_drawer_text">CLOSE</span>
+        </button>
+
+        <div class="dropdown_content">
+          <a href="#">Our Mission</a>
+          <a href="#">Our Place</a>
+          <a href="./beta.html">Beta Monitor</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- title -->
+    <div class="title-beta">
+      <div class="title-beta_text">
+        <h1>ベタモニター</h1>
+        <p>あなたのベタを今日も見守ります</p>
+      </div>
+    </div>
+
+    <!-- nav -->
+    <div class="nav-beta">
+      <div class="nav-beta_list">
+        <button class="button-beta button_beta">Beta Monitor</button>
+        <button class="button-beta">side view</button>
+        <button class="button-beta">menu</button>
+        <button class="button-beta">menu</button>
+        <button class="button-beta">setting</button>
+      </div>
+    </div>
+
+    <!-- Live Stream -->
+    <h2>Live Streaming...</h2>
+    <div class="livestream-beta">
+      <div class="livestream-beta_left">
+        <div class="livestream-beta_left_title">
+          <h2>□□□</h2>
+        </div>
+        <div class="livestream-beta_left_results">
+          <div class="livestream-beta_left_results_list">
+            <div class="result-beta temperature">
+              <div class="result-beta_title">
+                <p>水温</p>
+              </div>
+              <div class="result-beta_data">
+                <p>15℃</p>
+              </div>
+            </div>
+            <div class="result-beta water_quality">
+              <div class="result-beta_title">
+                <p>水質レベル</p>
+              </div>
+              <div class="result-beta_data">
+                <p>良好</p>
+              </div>
+            </div>
+            <div class="result-beta fish_wellness">
+              <div class="result-beta_title">
+                <p>ベタの様子</p>
+              </div>
+              <div class="result-beta_data">
+                <p>元気</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="livestream-beta_right_video">
+        <video id="video-beta"></video>
+      </div>
+    </div>
+
+    <script>
+      const video = document.getElementById("video-beta");
+      navigator.mediaDevices
+        .getUserMedia({
+          video: true,
+          audio: false,
+        })
+        .then((stream) => {
+          video.srcObject = stream;
+          video.play();
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    </script>
+  </body>
+</html>
